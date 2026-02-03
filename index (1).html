@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CodeAlpha AI Chatbot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- ========== FULL PAGE BACKGROUND ========== -->
+<div class="bg-grid"></div>
+
+<!-- ========== HEADER ========== -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-icon">◈</span>
+      <span class="logo-text">CodeAlpha <strong>AI</strong></span>
+    </div>
+    <span class="header-badge">Cloud-Powered Chatbot</span>
+  </div>
+</header>
+
+<!-- ========== CHAT WINDOW ========== -->
+<section class="chat-section">
+  <div class="chat-container">
+
+    <!-- Welcome Card (shown before first message) -->
+    <div class="welcome-card" id="welcomeCard">
+      <div class="welcome-icon">🤖</div>
+      <h2>Hello there!</h2>
+      <p>I'm <strong>CodeAlpha AI</strong> — your smart assistant.<br/>Ask me anything and I'll do my best to help.</p>
+      <div class="quick-prompts">
+        <button class="quick-btn" onclick="quickPrompt(this)">👋 Who are you?</button>
+        <button class="quick-btn" onclick="quickPrompt(this)">☁️ What is cloud computing?</button>
+        <button class="quick-btn" onclick="quickPrompt(this)">🤖 What can you do?</button>
+        <button class="quick-btn" onclick="quickPrompt(this)">💡 Tell me a fun fact</button>
+      </div>
+    </div>
+
+    <!-- Messages Area -->
+    <div class="messages" id="messagesBox"></div>
+  </div>
+</section>
+
+<!-- ========== INPUT BAR ========== -->
+<div class="input-bar">
+  <div class="input-wrapper">
+    <input type="text" id="userInput" class="input-field" placeholder="Type your message..." autocomplete="off" onkeydown="handleKey(event)"/>
+    <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="22" y1="2" x2="11" y2="13"></line>
+        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+      </svg>
+    </button>
+  </div>
+  <p class="input-note">Powered by CodeAlpha Cloud &bull; AI Chatbot Project</p>
+</div>
+
+<!-- ========== SCRIPTS ========== -->
+<script src="chatbot.js"></script>
+</body>
+</html>
